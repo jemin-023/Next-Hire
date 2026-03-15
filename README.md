@@ -143,7 +143,7 @@ npm start
 ## Environment Variables
 
 ```
-ANTHROPIC_API_KEY=your_key_here
+GROQ_API_AQI=your_key_here
 DATABASE_URL=postgresql://localhost:5432/nexthire
 REDIS_URL=redis://localhost:6379
 PORT=5000
@@ -170,5 +170,3 @@ Built in 24 hours at **Hack & Forge**, BIT Mesra.
 | Hasan Kabir |
 
 ---
-
-*Next-Hire AI · v2.0 Beta · System Online ●*
