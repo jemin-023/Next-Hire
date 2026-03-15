@@ -74,41 +74,23 @@ next-hire/
 ├── frontend/
 │   ├── src/
 │   │   ├── pages/
-│   │   │   ├── PortalSelection.jsx      # Landing page
-│   │   │   ├── CandidatePortal.jsx      # Interview flow
-│   │   │   └── HRPortal.jsx             # Company dashboard
+│   │   │   ├── Assets
+│   │   │   ├── Components
+│   │   │   └── pages
 │   │   └── styles/
-│   │       └── globals.css
+│   │       └── Index.css
 │   └── public/
 │
 ├── backend/
 │   ├── routes/
-│   │   ├── interview.js                 # /start, /next, /end
-│   │   ├── company.js                   # /setup
-│   │   └── hr.js                        # /leaderboard
-│   ├── services/
-│   │   ├── claudeService.js             # Claude API calls
-│   │   ├── cheatDetection.js            # Authenticity analysis
-│   │   └── ragService.js                # Vector store + retrieval
-│   ├── db/
-│   │   └── schema.sql                   # All 5 tables
-│   └── server.js
-│
+│   │   ├── Controller
+│   │   ├── DB
+│   │   └── Node module
 └── README.md
 ```
 
 ---
 
-## API Endpoints
-
-| Method | Endpoint | What it does |
-|--------|----------|--------------|
-| POST | `/api/company/setup` | Upload job role and criteria |
-| POST | `/api/interview/start` | Create session, return first question |
-| POST | `/api/interview/next` | Submit answer, get next question |
-| POST | `/api/interview/end` | Trigger final scoring |
-| POST | `/api/speech/transcribe` | Audio blob to text |
-| GET | `/api/hr/leaderboard` | Ranked candidates for HR |
 
 ---
 
