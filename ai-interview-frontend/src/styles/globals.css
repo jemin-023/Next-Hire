@@ -1,0 +1,194 @@
+/* ================================================================
+   globals.css — Next-Hire Landing Page
+   DEEP DARK SPOTLIGHT THEME — Brutalist, Heavy, Cinematic
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ────────────────────────────────────────────
+   1. LAYOUT WRAPPERS
+──────────────────────────────────────────── */
+.hero-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+  margin-top: -5vh; /* Push slightly up to balance bottom glow */
+  animation: heroEnter 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ────────────────────────────────────────────
+   2. TOP LEFT NAVIGATION (Logo & HR Portal)
+──────────────────────────────────────────── */
+.nav-top-left {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 50;
+}
+
+.hero-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #cccccc;
+}
+
+.hero-logo-icon {
+  color: var(--accent-pink);
+}
+
+/* ────────────────────────────────────────────
+   3. MASSIVE TYPOGRAPHY
+──────────────────────────────────────────── */
+.hero-h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero-h1-accent {
+  display: block;
+  color: var(--accent-pink);
+  text-shadow: 0 0 40px rgba(255, 45, 120, 0.4);
+}
+
+.hero-subtext {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #888888;
+  margin: 2rem auto 3rem;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.hero-subtext-highlight {
+  color: var(--accent-pink);
+  font-weight: 600;
+}
+
+/* ────────────────────────────────────────────
+   4. CORNER BUTTONS
+──────────────────────────────────────────── */
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  border: none;
+}
+
+/* Base secondary style for top-left Company button */
+.hero-btn--secondary {
+  background: transparent;
+  color: #aaaaaa;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+.hero-btn--secondary:hover {
+  background: #111111;
+  border-color: rgba(255,255,255,0.4);
+  color: #ffffff;
+}
+
+/* Primary Action Centered */
+.hero-primary-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  animation: heroEnter 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+  animation-delay: 0.2s; /* Stagger slightly after text */
+}
+
+.hero-btn--primary {
+  background: var(--accent-pink);
+  color: #fff;
+  box-shadow: 0 4px 25px rgba(255, 45, 120, 0.3);
+}
+
+.hero-btn--primary:hover {
+  background: #ff478a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 35px rgba(255, 45, 120, 0.5);
+}
+
+/* ────────────────────────────────────────────
+   5. BOTTOM UTILITY BAR
+──────────────────────────────────────────── */
+.hero-footer {
+  position: fixed;
+  bottom: 2rem;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+  color: #555555;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hero-footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-footer-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-pink);
+  box-shadow: 0 0 10px var(--accent-pink);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.5); }
+}

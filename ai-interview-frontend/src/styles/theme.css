@@ -1,0 +1,17 @@
+/* src/styles/theme.css - Global Color Theme */
+:root {
+  --gradient-start: #0a1f3d;
+  --gradient-mid: #071629;
+  --gradient-end: #0f3d91;
+  
+  --theme-bg-gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  --theme-card-bg: rgba(7, 22, 41, 0.88);
+  
+  --theme-border-base: 1px solid #1e3a5f;
+  --theme-border-hover: #2563eb;
+  
+  --theme-btn-gradient: linear-gradient(135deg, #1e4ed8, #0f3d91);
+  --theme-btn-hover: linear-gradient(135deg, #2563eb, #1e4ed8);
+  
+  --theme-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
